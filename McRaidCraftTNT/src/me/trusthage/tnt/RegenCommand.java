@@ -1,6 +1,6 @@
-     package me.trusthage.tnt;
+package me.trusthage.tnt;
      
-     import java.util.HashMap;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.bukkit.ChatColor;
