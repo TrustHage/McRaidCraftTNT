@@ -1,0 +1,16 @@
+main: me.trusthage.tnt.Main
+version: 1.0
+name: MCRaidCraftTNT
+author: TrustHage
+
+commands:
+  regen:
+    description: Regen
+  fury:
+    description: Fury
+  rage:
+    description: Rage
+  tnt:
+    description: Shoot a TNT block
+  tntreload:
+    description: Reloads Config file
