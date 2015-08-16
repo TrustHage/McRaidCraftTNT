@@ -7,8 +7,7 @@
      import org.bukkit.entity.Player;
      
      
-     public class ConfigReload
-       implements CommandExecutor
+     public class ConfigReload implements CommandExecutor
      {
        public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3)
        {

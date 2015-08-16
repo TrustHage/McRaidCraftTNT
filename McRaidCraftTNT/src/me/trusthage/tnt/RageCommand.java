@@ -40,7 +40,7 @@
            
          if (System.currentTimeMillis() - lastUsed >= cdmillis)
            {
-           player.sendMessage(ChatColor.GREEN + "You used your rage ability");
+           player.sendMessage(ChatColor.GREEN + "You used your Rage ability");
            this.lastUsage.put(player.getName(), Long.valueOf(System.currentTimeMillis()));
            player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 700, 0));
            player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 700, 2));

@@ -1,7 +1,8 @@
      package me.trusthage.tnt;
      
      import java.util.logging.Logger;
-     import org.bukkit.plugin.PluginDescriptionFile;
+
+import org.bukkit.plugin.PluginDescriptionFile;
      
      public class Main extends org.bukkit.plugin.java.JavaPlugin
      {
@@ -34,5 +35,6 @@
          
        logger.info(pdfFile.getName() + "V" + pdfFile.getVersion() + " has been disabled!");
        }
+       
      }
 

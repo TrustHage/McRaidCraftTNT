@@ -14,3 +14,5 @@ commands:
     description: Shoot a TNT block
   tntreload:
     description: Reloads Config file
+  tntreloads:
+    description: Reload config.yml

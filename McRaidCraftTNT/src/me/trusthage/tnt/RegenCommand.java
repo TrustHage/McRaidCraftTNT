@@ -39,7 +39,7 @@ import org.bukkit.potion.PotionEffectType;
            
          if (System.currentTimeMillis() - lastUsed >= cdmillis)
            {
-           player.sendMessage(ChatColor.GREEN + "You used your regen ability");
+           player.sendMessage(ChatColor.GREEN + "You used your Regen ability");
            this.lastUsage.put(player.getName(), Long.valueOf(System.currentTimeMillis()));
            player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 12000, 1));
            player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 12000, 1));
