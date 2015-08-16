@@ -3,6 +3,7 @@ package me.trusthage.tnt;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -39,7 +40,9 @@ public class Cooldown implements CommandExecutor {
 			else
 			{
 				int timeLeft = (int) (cdtime-((System.currentTimeMillis()-lastUsed)/1000));
-				player.sendMessage("This command is on cooldown for you for another " + timeLeft + "seconds.");
+				int seconds = (int) timeLeft % 60;
+		        int minutes = (int) ((timeLeft - seconds) / 60);
+		        player.sendMessage(ChatColor.RED + "You need to wait " + ChatColor.GOLD + minutes + ChatColor.GOLD + " minutes and " + ChatColor.GOLD + seconds + ChatColor.GOLD + " seconds" + ChatColor.RED + " before you can use this command again");
 			}
 			return false;
 		}

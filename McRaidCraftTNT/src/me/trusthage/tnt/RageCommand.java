@@ -49,7 +49,9 @@
            else
            {
            int timeLeft = (int)(this.cdtime - (System.currentTimeMillis() - lastUsed) / 1000L);
-           player.sendMessage(ChatColor.RED + "You need to wait " + ChatColor.GOLD + timeLeft + ChatColor.GOLD + " seconds" + ChatColor.RED + " before you can use this ability again.");
+           int seconds = (int) timeLeft % 60;
+           int minutes = (int) ((timeLeft - seconds) / 60);
+           player.sendMessage(ChatColor.RED + "You need to wait " + ChatColor.GOLD + minutes + ChatColor.GOLD + " minutes and " + ChatColor.GOLD + seconds + ChatColor.GOLD + " seconds" + ChatColor.RED + " before you can use your ability again");
            }
          }
          else

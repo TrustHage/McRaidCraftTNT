@@ -34,10 +34,10 @@ import org.bukkit.potion.PotionEffectType;
            }
            
          int cdmillis = this.cdtime * 1000;
-           
+             
          if (System.currentTimeMillis() - lastUsed >= cdmillis)
            {
-           player.sendMessage(ChatColor.GREEN + "You used your regen ability");
+           player.sendMessage(ChatColor.GREEN + "You used your Fury ability");
            this.lastUsage.put(player.getName(), Long.valueOf(System.currentTimeMillis()));
            player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 12000, 1));
            player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 12000, 1));
@@ -47,7 +47,9 @@ import org.bukkit.potion.PotionEffectType;
            else
            {
            int timeLeft = (int)(this.cdtime - (System.currentTimeMillis() - lastUsed) / 1000L);
-           player.sendMessage(ChatColor.RED + "You need to wait " + ChatColor.GOLD + timeLeft + ChatColor.GOLD + " seconds" + ChatColor.RED + " before you can use this ability again.");
+           int seconds = (int) timeLeft % 60;
+           int minutes = (int) ((timeLeft - seconds) / 60);
+           player.sendMessage(ChatColor.RED + "You need to wait " + ChatColor.GOLD + minutes + ChatColor.GOLD + " minutes and " + ChatColor.GOLD + seconds + ChatColor.GOLD + " seconds" + ChatColor.RED + " before you can use your ability again");
            }
          }
          else
